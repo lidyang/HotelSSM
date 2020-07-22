@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ldy.programmer.dao.admin.RoleDao">
+
+<!-- int add(Role role);
+	
+	int edit(Role role);
+	
+	int delete(long id);
+	
+	List<Role> findList(Map queryMap); -->
+
+	<!-- 权限插入操作 -->
+	<insert id="add" parameterType="Role">
+		insert into role(id,name,remark) values(null,#{name},#{remark})
+	</insert>
+	
+	
+	<!-- 角色修改操作 -->
+	<insert id="edit" parameterType="Role">
+		update role set name=#{name},remark=#{remark}
+	</insert>
+	
+	
+		<!-- 角色修改操作 -->
+	<select id="find" parameterType="Long" resultType="Role">
+		select id,name,remark from role where id = #{id}  
+		
+	</select>
+	
+	<!-- 查询角色列表 -->
+	<select id="findList"  resultType="Role">
+		select id,name,remark from role where 1 = 1 
+		<if test="name != null">
+			and name like '%${name}%' 
+		</if>
+		<if test="id != null">
+			and id = #{id}  
+		</if>
+		<if test="offset != null and pageSize != null">
+			limit #{offset},#{pageSize}
+		</if>
+	</select>
+	
+	<!-- 删除角色信息 -->
+	<delete id="delete" parameterType="Long">
+		delete from role where id = #{id}
+	</delete>
+</mapper>

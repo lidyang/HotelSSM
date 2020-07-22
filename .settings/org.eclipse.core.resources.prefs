@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+encoding//src/com/ldy/programmer/entity/admin/Authority.java=GBK
+encoding//src/com/ldy/programmer/entity/admin/Log.java=GBK
+encoding//src/com/ldy/programmer/entity/admin/Menu.java=GBK
+encoding//src/com/ldy/programmer/entity/admin/Role.java=GBK
+encoding//src/com/ldy/programmer/entity/admin/User.java=GBK
+encoding//src/com/ldy/programmer/interceptor/admin/LoginInterceptor.java=GBK
+encoding//src/com/ldy/programmer/util=UTF-8
+encoding//src/com/ldy/programmer/util/CpachaUtil.java=GBK
+encoding//src/com/ldy/programmer/util/DateUtil.java=GBK
+encoding//src/com/ldy/programmer/util/MenuUtil.java=GBK
+encoding//src/config/db.properties=UTF-8
